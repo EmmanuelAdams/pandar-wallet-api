@@ -10,6 +10,18 @@ In-memory wallet API with Node.js, Express, and TypeScript.
 - To deposit ₦50.00, send `amount: 5000` (5000 kobo)
 - Initial balance is 1,000,000 kobo = ₦10,000.00
 
+## Tech Stack
+
+- **Runtime:** Node.js
+- **Framework:** Express.js
+- **Language:** TypeScript
+- **Authentication:** JWT (jsonwebtoken)
+- **Validation:** express-validator
+- **Documentation:** Swagger/OpenAPI (swagger-ui-express)
+- **Testing:** Jest + Supertest
+- **Rate Limiting:** express-rate-limit
+- **Deployment:** Render
+
 ## Quick Start
 
 ```bash

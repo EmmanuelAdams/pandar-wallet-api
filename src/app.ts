@@ -9,6 +9,9 @@ import { swaggerSpec } from './swagger';
 export function createApp() {
   const app = express();
 
+  // Trust proxy - required when behind reverse proxies (e.g., Render)
+  app.set('trust proxy', true);
+
   app.use(express.json());
 
   // Swagger docs
