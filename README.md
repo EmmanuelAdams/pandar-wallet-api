@@ -2,14 +2,19 @@
 
 In-memory wallet API with Node.js, Express, and TypeScript.
 
+**Live Demo:** [https://pandar-wallet-api.onrender.com](https://pandar-wallet-api.onrender.com)
+**API Documentation:** [https://pandar-wallet-api.onrender.com/api-docs](https://pandar-wallet-api.onrender.com/api-docs)
+
 **Important:** All amounts are in **kobo** (the smallest unit of Nigerian Naira). 1 NGN = 100 kobo.
 
 - To deposit ₦50.00, send `amount: 5000` (5000 kobo)
 - Initial balance is 1,000,000 kobo = ₦10,000.00
 
-## Setup
+## Quick Start
 
 ```bash
+git clone <the-repo-url>
+cd pandar-wallet-api
 npm install
 cp .env.example .env
 npm run dev
@@ -72,13 +77,27 @@ curl "http://localhost:3000/transactions?page=1&limit=20" \
 
 ## Environment Variables
 
-| Variable | Default | Description |
-|----------|---------|-------------|
-| `PORT` | `3000` | Server port |
-| `JWT_SECRET` | - | Secret for JWT signing |
-| `JWT_EXPIRES_IN` | `24h` | Token expiration |
-| `NODE_ENV` | `development` | Environment |
-| `RATE_LIMIT_MUTATING_MAX` | `30` | Max mutating requests per window |
-| `RATE_LIMIT_MUTATING_WINDOW_MS` | `60000` | Mutating rate limit window (ms) |
-| `RATE_LIMIT_READ_MAX` | `100` | Max read requests per window |
-| `RATE_LIMIT_READ_WINDOW_MS` | `60000` | Read rate limit window (ms) |
+| Variable                        | Default       | Description                      |
+| ------------------------------- | ------------- | -------------------------------- |
+| `PORT`                          | `3000`        | Server port                      |
+| `JWT_SECRET`                    | -             | Secret for JWT signing           |
+| `JWT_EXPIRES_IN`                | `24h`         | Token expiration                 |
+| `NODE_ENV`                      | `development` | Environment                      |
+| `RATE_LIMIT_MUTATING_MAX`       | `30`          | Max mutating requests per window |
+| `RATE_LIMIT_MUTATING_WINDOW_MS` | `60000`       | Mutating rate limit window (ms)  |
+| `RATE_LIMIT_READ_MAX`           | `100`         | Max read requests per window     |
+| `RATE_LIMIT_READ_WINDOW_MS`     | `60000`       | Read rate limit window (ms)      |
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Make your changes
+4. Run tests (`npm test`)
+5. Commit your changes (`git commit -m 'feat: add amazing feature'`)
+6. Push to your branch (`git push origin feature/amazing-feature`)
+7. Open a Pull Request
+
+## License
+
+ISC

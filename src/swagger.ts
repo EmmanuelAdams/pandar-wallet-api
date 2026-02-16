@@ -8,6 +8,10 @@ export const swaggerSpec = {
   },
   servers: [
     {
+      url: 'https://pandar-wallet-api.onrender.com',
+      description: 'Production',
+    },
+    {
       url: 'http://localhost:3000',
       description: 'Development',
     },
